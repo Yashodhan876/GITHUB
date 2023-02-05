@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{% static 'images/logo.png'%}" type="image/png">
+    <title>Aboutuspage</title>
+    <link rel="stylesheet" href="{% static 'home/aboutus.css'%}">
+</head>
+
+<body>
+    <header class="header">
+        <div class="left">
+            <img src="" alt="">
+            <div>Library Management System</div>
+        </div>
+        <div class="mid">
+            <ul class="navbar">
+                <li><a href="/elib/userpage">Home</a></li>
+                <!-- <li><a href="#">Dance forms</a></li> -->
+                <li><a href="/contact">Contact us</a></li>
+                <li><a href="#"class="active">About us</a></li>
+            </ul>
+        </div>
+        <div class="right">
+            {% if user.is_authenticated %}
+            <button class="btn" onclick="window.location.href='/elib/AllBooks'">All Books</button>
+            <button class="btn" onclick="window.location.href='/logout'">Logout</button>
+            {% endif %}
+        </div>
+    </header>
+    <!-- <div id="mainbody">
+        <div class="container">
+            <nav class="navbar">
+                <ul class="item">
+                    <li class="class"><a href="/website/frontpage.html">HOME</a></li>
+                    <li class="class" id="cat12"><a href="#">CATEGORY
+                            <ul id="cat123">
+                                <li class="lic"><a id="new" href="/website/NormalUse.html">Normal</a></li>
+                                <li class="lic"><a href="/website/codding.html">Multitasking</a></li>
+                                <li class="lic"><a href="/website/content.html">Content</a></li>
+                                <li class="lic"><a href="/website/CasualGaming.html">Gaming</a></li>
+                                <li class="lic"><a href="/website/travel.html">Travel</a></li>
+                                <li class="lic"><a href="/website/business.html">Business</a></li>
+                            </ul>
+                         </a></li>
+                    <li class="class"><a href="#">ABOUT US </a></li>
+                    <li class="class"><a href="/website/contactus.html">CONTACT US</a></li>
+                </ul>
+            </nav>
+            <div id="back">
+                <!-- <h2>Welcome to<br> Laptop Buying Guide</h2> -->
+    </div>
+    </div> -->
+
+    <div class="aboutus">
+        <p>
+        <ol type="I">
+            <li> An electronic library has, not only text data but also sound, graphics,</li>
+            <li>and motion video, in the form of
+                digital data</li><br>
+            <li>The Electronic Library System provides the latest functions as well as allowing <br>books to be
+                displayed on
+                screen as if they were printed books</li>
+            <br>
+            <li>The system makes advances in retrieving books and papers.</li><br>
+            <li>An e-library or Digital library is a website that provide around the clock online<br>
+                access to digitized audio, video, and written material.</li><br>
+            <li>Online libraries help the scientific society since they act as a reservoir for the <br> storage of
+                important
+                research data, information and findings.</li><br>
+            <li> Librarians help students learn the best ways to access</li><br>
+            <li>Use quality information and resources, help
+                them to  enhance their <br>study and research skills.</li>
+        </ol>
+
+
+
+
+
+
+
+        </p>
+    </div>
+</body>
+
+</html>

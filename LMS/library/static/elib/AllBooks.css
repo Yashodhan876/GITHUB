@@ -1,0 +1,209 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+.header{
+   background-color: #1c0c04;
+   height: 70px;
+}
+.left{
+    display: inline-block;
+    /* border: 4px solid brown; */
+    color: wheat;
+    position: absolute;
+    font-size: 22px;
+    left: 25px;
+    top: -5px;
+    }
+.mid{
+    display: inline-block;
+    position: absolute;
+    left: 34%;
+    top: 3%;
+    /* margin: 20px  auto; */
+    width: 40%;
+}
+.right{
+    display: inline-block;
+   /* width: 30%;*/
+    position: absolute;
+    right: 34px;
+    top: 20px;
+}
+.navbar{
+    display: inline-block;
+}
+.navbar li{
+    display: inline-block;
+    font-size: 23px;
+}
+.navbar li a{
+    color: white;
+    text-decoration: none;
+    padding: 13px 30px;
+}
+.navbar li a:hover, .navbar li a.active{
+    text-decoration: underline;
+    color: wheat;
+}
+.btn{
+    margin: 0px 9px;
+    background-color: #1c0c04;
+    color: white;
+    padding: 4px 20px;
+    border: 2px solid gray;
+    border-radius: 13px;
+    font-size: 18px;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: black;
+    transform: scale(1.1);
+    transition: 0.3ms;
+}
+
+.head{
+    display: flex;
+    margin:10px;
+    justify-content: center;
+    flex-wrap: nowrap;
+    font-size: 20px;
+    font-weight: 1000;
+    font-family: 'Poppins', sans-serif;
+}
+.content{
+    display: flex;
+    margin:10px;
+    justify-content: center;
+    flex-wrap: nowrap;
+    font-family: 'Baloo 2', cursive;
+    font-size: 19px;
+}
+.heading{
+    display: inline-block;
+    border:3px solid gray;
+    padding: 5px;
+}
+#sr{
+    text-align: center;
+    width: 42px;
+    background-color: wheat;
+}
+#Photo{
+    width: 150px;
+    text-align: center;
+    background-color: wheat;
+}
+#Name{
+    
+    text-align: center;
+    width: 420px;
+    background-color: wheat;
+}
+#Aut{
+    text-align: center;
+    width: 178px;
+    background-color: wheat;
+}
+#isbn{
+    text-align: center;
+    width: 150px;
+    background-color: wheat;
+}
+#info{
+    text-align: center;
+    width: 190px;
+    background-color: wheat;
+}
+#but{
+    text-align: center;
+    width: 200px;
+    background-color: wheat;
+}
+.cont{
+    height: 120px;
+    text-align: center;
+    padding-top: 69px;
+    padding-bottom: 0px;
+    background-color: azure;
+}
+.sr1{
+    text-align: center;
+    width: 42px;
+}
+.Photo1{
+    width: 150px;
+    text-align: center;
+    padding: 5px;
+    height: 179px;
+}
+.Name1{
+
+    text-align: center;
+    width: 420px;
+}
+.Aut1{
+    text-align: center;
+    width: 178px;
+}
+.isbn1{
+    text-align: center;
+    width: 150px;
+}
+.info1{
+    text-align: center;
+    width: 190px;
+}
+.but1{
+    text-align: center;
+    width: 200px;
+    padding-top: 50px;
+    height: 139px;
+}
+.dnd1{
+    font-size: 25px;
+    padding: 3px;
+    margin-bottom: 12px;
+    width: 168px;
+    border-radius: 5px;
+    background-color: #1c0c04;
+    color: wheat;
+}
+.dnd1:hover{
+    transform: rotate3d(0 ,1 , 0, 360deg);
+    transition: 1.1s;
+    cursor: pointer;
+    background-color: greenyellow;
+    color: black;
+}
+.dnd2{
+    font-size: 25px;
+    padding: 3px;
+    width: 168px;
+    border-radius: 5px;
+    background-color: #1c0c04;
+    color: wheat;
+}
+.dnd2:hover{
+    transform: rotate3d(0 ,1 , 0, 360deg);
+    transition: 1.1s;
+    cursor: pointer;
+    background-color: tomato;
+    color: black;
+}
+/* .dnd1 a{
+    text-decoration: none;
+    color: wheat;
+}
+.dnd1 a:hover{
+    text-decoration: none;
+    color: black;
+} */
+.dnd2 a{
+    text-decoration: none;
+    color: wheat;
+}
+.dnd2 a:hover{
+    text-decoration: none;
+    color: black;
+}

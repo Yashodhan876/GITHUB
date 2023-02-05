@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'elib/userpage.css'%}">
+    <link rel="shortcut icon" href="{% static 'images/logo.png'%}" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Userpage</title>
+</head>
+
+<body>
+    {% load static %}
+    <header class="header">
+        <div class="left">
+            <img src="" alt="">
+            <div>Library Management System</div>
+        </div>
+        <div class="mid">
+            <ul class="navbar">
+                <li><a href="#" class="active">Home</a></li>
+                <!-- <li><a href="#">Dance forms</a></li> -->
+                <li><a href="/contact">Contact us</a></li>
+                <li><a href="/about">About us</a></li>
+            </ul>
+        </div>
+        <div class="right">
+            <button class="btn" onclick="window.location.href='/elib/AllBooks'">All Books</button>
+            <button class="btn" onclick="window.location.href='/logout'">Logout</button>
+        </div>
+    </header>
+    {% if messages %}
+    <ul class="messages" style="background-color: black; color: wheat; border: 2px solid wheat; border-radius: 3px;padding: 3px; font-size: 25px;">
+        {% for message in messages %}
+        <li class="{{ message.tags }}">{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    <div class="mainbody">
+        <div id="user"> <i class="material-icons" id="usericon">account_circle</i>{{request.user}}</div>
+        <form action="/elib/search" method="get">
+        <div class="searchbox">
+            <input type="search" name="search" placeholder="Search For Book (By Title)">
+            <button id="search" type="submit"><i class="material-icons" id="opt">search</i></button>
+        </div>
+        </form>
+        <div class="quote">Nothing is pleasanter than exploring a library.</div>
+        <div class="category">
+            <li class="class" id="cat12"><button class="button"><a href="#">CATEGORY
+                        <ul id="cat123">
+                            <li class="lic"><a href="/elib/category/0">Science And Maths</a></li>
+                            <li class="lic"><a href="/elib/category/1">History</a></li>
+                            <li class="lic"><a href="/elib/category/2">Economics And Business</a></li>
+                            <li class="lic"><a href="/elib/category/3">Electronics And Digital World</a></li>
+                            <li class="lic"><a href="/elib/category/4">Literature And Fiction</a></li>
+                            <li class="lic"><a href="/elib/category/5">Geography And Outer World</a></li>
+                        </ul>
+                    </a></button></li>
+        </div>
+    </div>
+    <div id="History">
+        <h3 id="myhist">My Book History</h3>
+    <div class="head">
+        <div id="sr" class="heading">ID</div>
+        <div id="Photo" class="heading">Photo</div>
+        <div id="Name" class="heading"> Book Name</div>
+        <div id="Aut" class="heading"> Author</div>
+        <div id="isbn" class="heading"> Issue Date</div>
+        <div id="info" class="heading"> Return Date</div>
+        <!-- <div id="but" class="heading"> Apply / Download</div> -->
+    </div>
+    {% for i in Hist %}
+    <div class="content">
+        <div class="sr1 heading cont">{{i.Book_id}}</div>
+        {% for c in Book %}
+        {% if c.Book_id == i.Book_id %}
+        <div class="Photo1 heading cont"><img src="/media/{{c.image}}" alt="" width="150" height="179"></div>
+        {% endif %}
+        {% endfor %}
+        <div class="Name1 heading cont ">{{i.Book_Name}}</div>
+        <div class="Aut1 heading cont">{{i.author}}</div>
+        <div class="isbn1 heading cont">{{i.sactime}}</div>
+        <div class="info1 heading cont">{{i.rettime}}</div>
+        <!-- <div class="but1 heading cont"><button class="dnd1">Apply</button><br><button class="dnd2">Download</button>
+        </div> -->
+    </div>
+    {% endfor %}
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'libman/style.css'%}">
+    <link rel="shortcut icon" href="{% static 'images/logo.png'%}" type="image/png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+   <title>E-Library</title>
+</head>
+
+<body>
+  {% load static %}
+  <div class="container"> 
+      <div id="heading"><h1 > WELCOME &nbsp TO<br> BAJRANGDAS &nbsp LOHIYA <br> CENTRAL &nbsp LIBRARY</h1></div>
+      <div class="loginbtn">
+          <button class="btn" onclick=Hide() >Reader's Login</button> 
+          <button class="btn" onclick=Hide2()>Admin Login</button>
+    </div>
+
+    <div id="pop">
+      <form>
+        <h2>Login</h2>
+       <div class="formele">
+         <label for="Email">Email</label>
+         <input class="input" type="text" placeholder="Enter Your Email">
+        </div>
+        <div class="formele">
+         <label for="password" > Password</label>
+         <input class="input" type="password" placeholder="Enter Your Password">
+       </div>
+       <div class="formele">
+         <button id="signin"> Sign in</button>
+       </div>
+       <div class="formele" >
+        <span>Don't have account?</span>
+        <button id="Reg" ><a href="register">Register </a></button>
+       </div>
+      </form>
+    </div>
+
+    <div id="pop2">
+      <form>
+        <h2>Login</h2>
+       <div class="formele">
+         <label for="Email">Email</label>
+         <input class="input" type="text" placeholder="Enter Your Email">
+        </div>
+        <div class="formele">
+         <label for="password" > Password</label>
+         <input class="input" type="password" placeholder="Enter Your Password">
+       </div>
+       <div class="formele">
+         <button id="signin"> Sign in</button>
+       </div>
+      </form>
+    </div>
+  </div>
+  <div class="contact"> <a href="#"> ABOUT US </a><br><br>
+    <a href="#"> CONTACT US </a><br>
+    <footer> Copyright  © 2021-2022</footer>
+</div>
+<script>
+function Hide(){
+        // let btn = document.getElementById('btn');
+        let pop= document.getElementById('pop'); 
+        if(pop.style.display == 'none'){
+        pop.style.display = 'block';
+        }
+        else{
+        pop.style.display = 'none';
+        }
+      }
+function Hide2(){
+        // let btn = document.getElementById('btn');
+        let pop2= document.getElementById('pop2'); 
+        if(pop2.style.display != 'none'){
+        pop2.style.display = 'none';
+        }
+        else{
+        pop2.style.display = 'block';
+        }
+      }
+</script>
+</body>
+</html>

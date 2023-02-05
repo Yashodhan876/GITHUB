@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{% static 'images/logo.png'%}" type="image/png">
+    <title>Contactuspage</title>
+   <link rel="stylesheet" href="{% static 'home/contactus.css '%}">
+</head>
+
+<body>
+    <header class="header">
+        <div class="left">
+            <img src="" alt="">
+            <div>Library Management System</div>
+        </div>
+        <div class="mid">
+            <ul class="navbar">
+                <li><a href="/elib/userpage">Home</a></li>
+                <!-- <li><a href="#">Dance forms</a></li> -->
+                <li><a href="#" class="active">Contact us</a></li>
+                <li><a href="/about">About us</a></li>
+            </ul>
+        </div>
+        <div class="right">
+            {% if user.is_authenticated %}
+            <button class="btn" onclick="window.location.href='/elib/AllBooks'">All Books</button>
+            <button class="btn" onclick="window.location.href='/logout'">Logout</button>
+            {% endif %}
+        </div>
+    </header>
+<!-- 
+    <div id="mainbody">
+        <div class="container">
+            <nav class="navbar">
+                <ul class="item">
+                    <li class="class"><a href="/website/frontpage.html">HOME</a></li>
+                    <li class="class" id="cat12"><a href="#">CATEGORY
+                            <ul id="cat123">
+                                <li class="lic"><a id="new" href="/website/NormalUse.html">Normal</a></li>
+                                <li class="lic"><a href="/website/codding.html">Multitasking</a></li>
+                                <li class="lic"><a href="/website/content.html">Content</a></li>
+                                <li class="lic"><a href="/website/CasualGaming.html">Gaming</a></li>
+                                <li class="lic"><a href="/website/travel.html">Travel</a></li>
+                                <li class="lic"><a href="/website/business.html">Business</a></li>
+                            </ul>
+                        </a></li>
+                    <li class="class"><a href="/aboutus.html">ABOUT US </a></li>
+                    <li class="class"><a href="#">CONTACT US</a></li>
+                </ul>
+            </nav> -->
+            <h2 id="top">HOLDERS OF THIS WEBSITE</h2>
+        </div>
+    </div>
+    <div class="block">
+        <div class="image" id="l1"></div>
+        <div class="information">
+            <h2 class="name">YASHODHAN BANKAR</h2>
+            <br>
+            <h5 class="email">yashodhan.bankar20@vit.edu <br>
+                8767737705</h5>
+        </div>
+    </div>
+    <div class="block">
+        <div class="image" id="l2"></div>
+        <div class="information">
+            <h2 class="name">TILAK BANG</h2>
+            <br>
+            <h5 class="email">tilak.bang20@vit.edu <br>
+                7741041902</h5>
+        </div>
+    </div>
+    <div class="block">
+        <div class="image" id="l3"></div>
+        <div class="information">
+            <h2 class="name">PRATHAM BANNORE</h2>
+            <br>
+            <h5 class="email"> pratham.bannore20@vit.edu <br>
+                7058041895</h5>
+        </div>
+    </div>
+    <div class="block">
+        <div class="image" id="l4"></div>
+        <div class="information">
+            <h2 class="name">MOHANJEETSINGH BANSAL</h2>
+            <br>
+            <h5 class="email">mohanjeetsingh.bansal20@vit.edu <br>
+                8421052137</h5>
+        </div>
+    </div>
+    <div class="block">
+        <div class="image" id="l5"></div>
+        <div class="information">
+            <h2 class="name">SHUBHAM BANGAR</h2>
+            <br>
+            <h5 class="email">shubham.bangar20@vit.edu <br>
+                8669290927</h5>
+        </div>
+    </div>
+    <div class="block">
+        <div class="image" id="l6"></div>
+        <div class="information">
+            <h2 class="name">KHUSHI BANGAD</h2>
+            <br>
+            <h5 class="email">khushi.bangad20@vit.edu <br>
+                9373754421</h5>
+        </div>
+    </div>
+</body>
+
+</html>

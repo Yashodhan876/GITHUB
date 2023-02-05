@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'elib/AllBooks.css'%}">
+    <link rel="shortcut icon" href="{% static 'images/logo.png'%}" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <title>All Books</title>
+</head>
+
+<body>
+    {% load static %}
+    <header class="header">
+        <div class="left">
+            <img src="" alt="">
+            <div>Library Management System</div>
+        </div>
+        <div class="mid">
+            <ul class="navbar">
+                <li><a href="/elib/userpage">Home</a></li>
+                <!-- <li><a href="#">Dance forms</a></li> -->
+                <li><a href="/contact">Contact us</a></li>
+                <li><a href="/about">About us</a></li>
+            </ul>
+        </div>
+        <div class="right">
+            <button class="btn" onclick="window.location.href='/elib/AllBooks'">All Books</button>
+            <button class="btn" onclick="window.location.href='/logout'">Logout</button>
+        </div>
+    </header>
+    {% if messages %}
+    <ul class="messages" style="background-color: black; color: wheat; border: 2px solid wheat; border-radius: 3px;padding: 3px; font-size: 25px;">
+        {% for message in messages %}
+        <li class="{{ message.tags }}">{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    <div class="head">
+        <div id="sr" class="heading">ID</div>
+        <div id="Photo" class="heading">Photo</div>
+        <div id="Name" class="heading"> Book Name</div>
+        <div id="Aut" class="heading"> Author</div>
+        <div id="isbn" class="heading"> ISBN-10</div>
+        <div id="info" class="heading"> Description</div>
+        <div id="but" class="heading"> Apply / Download</div>
+    </div>
+
+    {% for i in Book %}
+    <div class="content">
+        <div class="sr1 heading cont">{{i.Book_id}}</div>
+        <div class="Photo1 heading cont"><img src="/media/{{i.image}}" alt="" width="150" height="179"></div>
+        <div class="Name1 heading cont ">{{i.Book_Name}}</div>
+        <div class="Aut1 heading cont">{{i.author}}</div>
+        <div class="isbn1 heading cont">{{i.ISBN_10}}</div>
+        <div class="info1 heading cont">{{i.desc}}</div>
+        <div class="but1 heading cont"><button class="dnd1" onclick="window.location.href='/elib/Apply/{{i.Book_id}}'">Apply</button><br>
+            <button class="dnd2">
+                <a href="/media/{{i.pdf}}" download>Download</a>
+            </button>
+        </div>
+    </div>
+    {% endfor %}
+
+
+</body>
+
+</html>

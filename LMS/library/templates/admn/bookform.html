@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="{% static 'admn/bookform.css'%}">
+    <link rel="shortcut icon" href="{% static 'images/logo.png'%}" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    {% load static %}
+    <header class="header">
+        <div class="left">
+            <img src="" alt="">
+            <div>Library Management System</div>
+        </div>
+        <div class="mid">
+            <ul class="navbar">
+                <li><a href="/admn/AdmnUser">Home</a></li>
+                <!-- <li><a href="#">Dance forms</a></li> -->
+                <li><a href="/admn/AddBook">Add Book</a></li>
+                <li><a href="/admn/Records">Records</a></li>
+            </ul>
+        </div>
+        <div class="right">
+            <button class="btn" onclick="window.location.href='/admn/AdmnBooks'">All Books</button>
+            <button class="btn" onclick="window.location.href='/adminlogout'">Logout</button>
+        </div>
+    </header>
+    {% if messages %}
+    <ul class="messages"
+        style="background-color: black; color: wheat; border: 2px solid wheat; border-radius: 3px;padding: 3px; font-size: 25px;">
+        {% for message in messages %}
+        <li class="{{ message.tags }}">{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    <div class="container">
+        <h1>Add A BOOK</h1>
+        <form class="form" method="post" action="/admn/added" enctype="multipart/form-data">
+            <div class="form-group">
+                <label class="label">Book Id :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                <input type="number" name="bookid" class="input" placeholder="ENTER BOOK ID">
+            </div>
+            <div class="form-group">
+                <label class="label">Book Name :</label>
+                <input type="text" name="bookname" class="input" placeholder="ENTER BOOK NAME">
+            </div>
+            <div class="form-group">
+                <label class="label">Author :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                <input type="text" name="writer" class="input" placeholder="ENTER BOOK AUTHOR">
+            </div>
+            <div class="form-group">
+                <label class="label">Category :&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                <input type="text" name="categ" class="input" placeholder="ENTER BOOK CATEGORY">
+            </div>
+            <div class="form-group">
+                <label class="label">ISBN-10 :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                <input type="text" name="isb" class="input" placeholder=" ENTER ISBN-10">
+            </div>
+            <div class="form-group">
+                <label class="label">Description :</label>
+                <input type="text" name="descp" class="input" placeholder="ENTER DESCRIPTION">
+            </div>
+            <div class="form-group">
+                <label class="label">Add Image :&nbsp;</label>
+                <input type="file" class="input" name="img" accept="image/*">
+                <!-- <label>Add Image</label> -->
+            </div>
+            <div class="form-group">
+                <label class="label">Add PDF :&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                <input type="file" accept="pdf/*" name="pdff" class="input">
+                {% csrf_token %}
+            </div>
+            <button class="btn submit" type="submit">&nbsp;SUBMIT</button>
+        </form>
+
+
+    </div>
+    </header>
+</body>
+
+</html>

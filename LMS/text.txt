@@ -1,0 +1,7 @@
+icoder project, library project
+blog app, elib app
+urls.py in blog app, urls.py in elib
+home=frontpage in urls of elib
+blog=register in urls of elib
+home app
+/ at end in path for project urls

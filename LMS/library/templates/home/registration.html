@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="{% static 'images/logo.png'%}" type="image/png">
+    <link rel="stylesheet" href="{% static 'home/registration.css'%}">
+    <title>Registration Form</title>
+</head>
+
+<body>
+    {% load static %}
+    {% if messages %}
+    <ul class="messages" style="background-color: black; color: wheat; border: 2px solid wheat; border-radius: 3px;">
+        {% for message in messages %}
+        <li class="{{ message.tags }}">{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    <div class="container">
+        <h1>Registration Form</h1>
+        <form action="/signup" method="post">
+            <div class="form-group">
+                <input type="text" id="username" name="username" placeholder="ENTER YOUR NAME" required>
+            </div>
+            <div class="form-group">
+                <input type="email" id="email" name="email" placeholder="ENTER YOUR E-MAIL" required>
+            </div>
+            <div class="form-group">
+                <input type="text" id="phno" name="phno" placeholder="ENTER YOUR PHONE NUMBER" required>
+            </div>
+            <div class="form-group">
+                <input type="text" id="prnno" name="prnno" placeholder=" ENTER YOUR PRN NUMBER" required>
+            </div>
+            <div class="form-group">
+                <input type="password" id="pass1" name="pass1" placeholder="ENTER PASSWORD" required>
+            </div>
+            <div class="form-group">
+                <input type="text" id="pass2" name="pass2" placeholder="RE-ENTER PASSWORD" required>
+                {% csrf_token %}
+            </div>
+            <button type="submit" class="btn">SUBMIT</button>
+        </form>
+
+    </div>
+</body>
+
+</html>
