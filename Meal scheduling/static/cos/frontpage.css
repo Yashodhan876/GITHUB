@@ -1,0 +1,74 @@
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom:57px;
+  right: 253px;
+  z-index: 9;
+  border: 3px solid black;
+  background-color: white;
+}
+.form-popup1 {
+  display: none;
+  position: fixed;
+  bottom:514px;
+  right: 253px;
+  z-index: 9;
+  border: 3px solid black;
+  background-color: white;
+}
+
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+
+}
+
+/* Full-width input fields */
+
+
+/* Set a style for the submit/login button */
+.btn {
+  background-color: #04AA6D;
+  padding: 11px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+  width: 136px;
+  margin-top: 12px;
+}
+
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+.btn{
+  align-items: center;
+}
+.n{
+margin-top: 11px;
+}
+.p{
+margin-top:11px;
+}
+.bt{
+  text-align: center;
+}
+.ad
+{
+  position: absolute;
+  right: 17%;
+  background-color: transparent;
+  color: white;
+  height: 47px;
+  width: 94px;
+  top: 2%;
+  font-size: 23px;
+  border-radius: 11px;
+}
+.ad:hover{
+  color:#fff;
+  transition:all 0.4s;
+  }

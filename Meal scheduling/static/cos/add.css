@@ -1,0 +1,47 @@
+*
+{
+    margin: 0px;
+    padding: 0px;
+   
+}
+body{
+    background: url(/static/images/hotel.jpg);
+    background-size: 100%;
+}
+.continer
+{
+        margin-top: 1em;
+        margin-right: 20em;
+        margin-left: 20em;
+        border: 2px solid;
+        height: 36em;
+        background: wheat;
+        border-radius: 84px;  
+}
+.heading
+{
+    text-align: center;
+    font-size: 5em;
+}
+.in{
+    margin-top: 5em;
+    margin-left: 17em;
+}
+.inputsitems
+{
+    height: 2em;
+    width: 21em;
+}
+.lb
+{
+    font-size: 2em;
+}
+.bt{
+    height: 2em;
+    font-size: 1em;
+    margin-left: 22em;
+    margin-top: 5em;
+    width: 9em;
+    background: skyblue;
+    border-radius: 37px;
+}

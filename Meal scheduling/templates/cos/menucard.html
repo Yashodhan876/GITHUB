@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {% load static %}
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'cos/menucard.css' %}">
+  <title>Document</title>
+</head>
+
+<body>
+  {% load static %}
+  <div id="container">
+    <nav>
+      <ul>
+        <li>MENU CARD</li>
+      </ul>
+    </nav>
+  </div>
+  <form action="/order" method="post">
+    {% csrf_token %}
+    <div class="pass" style="display: none;">
+      <select name="first_name"><option value="{{first_name}}"></option></select>
+      <select name="last_name"><option value="{{last_name}}"></option></select>
+      <select name="phoneno"><option value="{{phoneno}}"></option></select>
+      <select name="t"><option value="{{timeslot}}"></option></select>
+      <select name="sel"><option value="{{mem}}"></option></select>
+    </div>
+  <a class="type">
+    Fast Food<button class="bn" type="submit"> submit</button></a>
+  </div>
+  {% if messages %}
+<ul style="background-color: #f35858;height: 34px;text-align: center; font-size: 25px;">
+    {% for message in messages %}
+    <li {% if message.tags %} {% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+  <div class="title">
+    <div id="sr_no" class="com">
+      SR.NO
+    </div>
+    <div id="name" class="com">
+      <span>Name</span>
+    </div>
+    <div id="price" class="com">
+      <span> Price</span>
+    </div>
+    <div id="image" class="com">
+      <span>Images</span>
+    </div>
+    <div id="select" class="com">
+      <span>Order</span>
+    </div>
+    <div id="quant" class="com">
+      quantity
+    </div>
+  </div>
+  {% for i in menu %}
+  <div class="title">
+    <div id="sr_no" class="com1">
+      {{forloop.counter}}
+    </div>
+    <div id="name" class="com1">
+      <span>{{i.dish_name}}</span>
+    </div>
+    <div id="price" class="com1">
+      <span> {{i.dish_price}}</span>
+    </div>
+    <div id="image1" class="com2" style="background: url(/media/{{i.image}}); background-size: 100% 100%;">
+      <span> &nbsp;</span>
+    </div>
+    <div id="select" class="com1">
+      <input class="in" type="checkbox" name="{{i.dish_name}}" value="{{i.dish_name}}">
+    </div>
+    <div id="quant" class="com1" >
+      <input type="number" name="{{i.image}}">
+    </div>
+  </div>
+  {% endfor %}
+</form>
+
+</body>
+
+</html>

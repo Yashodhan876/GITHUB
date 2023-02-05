@@ -1,0 +1,181 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+#container {
+    position: relative;
+}
+nav {
+    background: #1c1c17;
+    height: 80px;
+    width: auto;
+}
+
+nav ul {
+    float: left;
+    margin-left: 45px;
+}
+.form-popup {
+    display: none;
+    position: fixed;
+    bottom:57px;
+    right: 253px;
+    z-index: 9;
+    border: 3px solid black;
+  }
+  
+  /* Add styles to the form container */
+  .form-container {
+    max-width: 300px;
+    padding: 10px;
+
+  }
+  
+  /* Full-width input fields */
+  
+  
+  /* Set a style for the submit/login button */
+ .btn {
+    background-color: #04AA6D;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+    width: 136px;
+  }
+  
+  /* Add a red background color to the cancel button */
+  .form-container .cancel {
+    background-color: red;
+  }
+  
+  /* Add some hover effects to buttons */
+  .form-container .btn:hover, .open-button:hover {
+    opacity: 1;
+  }
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding: 7px 13px;
+    border-radius: 5px 20px 20px 5px;
+    text-transform: uppercase;
+    border: 3px solid rgb(184, 181, 181);
+}
+
+nav ul li a:hover {
+    background: #8ce436;
+    color: #1b1b1b;
+}
+
+.book
+{
+    /* border: 2px solid red; */
+    background-color: #b6cbe7;
+    height: auto;
+    width: auto;
+}
+.inst{
+    text-align: center;
+    /* border: 2px solid black; */
+    font-size: 3em;
+    background: url("/static/images/the-restaurant.jpg");
+}
+.time
+{
+    /* border: 2px
+     solid green;*/
+    border-radius: 74px;  
+    height: 5rem;
+    width: 30rem;
+    margin: 0.4em;
+    display: inline-block;
+    background:rgba(255, 0, 0, 0.4);;
+    text-align: center;
+    margin-left: 11em;
+}
+.timeslot
+{
+    font-size: 9px;
+    width: 9%;
+    height: 2em;
+    margin: 32px;
+}
+.labal
+{
+    font-size: 2em;
+}
+.sel{
+    height: 4em;
+    width: 6em;
+}
+.just
+{
+    margin-right: 2em;
+}
+.car
+{
+  width: 90%;
+  margin-left: 4em;
+}
+.mem1
+{
+    padding-left: 35%;
+    margin-top: 24px;
+}
+.sub
+{
+    margin-top:20px ;
+    padding-left: 37%;
+    
+}
+.but
+{
+height: 4em;
+  width: 151px;
+  padding: 1.5em auto;
+  margin: 1em auto;
+  background-color: #FEB1C0;
+  border: none;
+  border-radius: 3px;
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+  transition: all 0.2s cubic-bezier(.4,0,.2,1);
+  margin-left: -27%;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+  border-radius: 39px;
+
+}
+.but:hover
+{
+    letter-spacing: 0.8em;
+  background-color: #F08C99;
+}
+.btn1
+{
+    background-color: #04AA6D;
+    margin-left: 115px;
+    margin-top: 7px;
+    margin-bottom: 2px;
+    width: 61px;
+}
+.btn{
+    align-items: center;
+}
+.n{
+ margin-top: 11px;
+}
+.p{
+margin-top:11px;
+}

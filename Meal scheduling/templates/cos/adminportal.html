@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'cos/adminportal.css' %}">
+</head>
+
+<body>
+  <div class="head">
+    <form action="/adminlogout" class="no"style=" display: inline-block;float:right;">
+    <button class="Logout" type="submit">Logout</button></form>
+    <form action="/gotoadd" class="no"style="    display: inline-block;float: left;">
+      <button class="Logout" type="submit">Add Items</button></form>
+      <form action="/gotodelete" class="no"style="    display: inline-block;float: left;">
+        <button class="Logout" type="submit">Delet Items</button></form>
+  </div>
+    {% load static %}
+    <table style="width:100%">
+        <tr>
+          <th>Name</th>
+          <th>Phone.no</th>
+          <th>OrderDate</th>
+          <th>SheduleTime</th>
+          <th>Ordered Dish</th>
+          <th>Qunatity</th>
+          <th>Price</th>
+          <th>Members</th>
+          <th>Total</th>
+        </tr>
+        {% for i in order %}
+        <tr>
+            <th>{{i.first_name}}&#9; {{i.last_name}}</th>
+            <th>{{i.phoneno}}</th>
+            <th>{{i.orderdate}}</th>
+            <th>{{i.sheduletime}}</th>
+            <th>{% for j in i.dish_list %}
+                <div>{{j}}</div>
+                {% endfor %}
+            </th>
+            <th>{% for j in i.quantity_list %}
+                <div>{{j}}</div>
+                {% endfor %}</th>
+            <th>{% for j in i.price_list %}
+                <div>{{j}}</div>
+                {% endfor %}</th>
+            <th>{{i.members}}</th>
+            <th>{{i.total}}</th>
+          </tr>
+          {% endfor %}
+</body>
+</html>

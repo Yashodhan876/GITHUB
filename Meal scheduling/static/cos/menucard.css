@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+#container {
+    position: relative;
+}
+nav {
+    background: #1c1c17;
+    height: 80px;
+    width: auto;
+}
+
+nav ul {
+    float: left;
+    margin-left: 45px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding: 7px 13px;
+    border-radius: 5px 20px 20px 5px;
+    text-transform: uppercase;
+    border: 3px solid rgb(184, 181, 181);
+}
+
+
+table, th, td {
+    border:1px solid black;
+    height: 81px;
+    
+  }
+li{
+    color: white;
+    font-size:31px;
+    text-align: center;
+    align-items: center;
+    text-shadow: #1c1c17;
+}
+.head
+{
+    width: auto;
+}
+.type
+{
+    color: black;
+    border: 2 px solid red;
+    height: 59px;
+    margin: 0px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 29px;
+}
+.m
+{
+    width: 82px;
+    columns: green;
+}
+
+#sr_no
+{
+    border: 2px solid black;
+    display: inline-block;
+    width: 13%;
+    text-align: center;
+}
+#name{
+    border: 2px solid black;
+        display: inline-block;
+        width: 16%;
+        text-align: center;
+}
+#price
+{
+    border: 2px solid black;
+    display: inline-block;
+    width: 20%;
+}
+#image
+{
+    border: 2px solid black;
+    display: inline-block;
+    width: 18%;
+}
+#select
+{
+    border: 2px solid black;
+    display: inline-block;
+    width: 16%;
+}
+.com
+{
+    /* height: 126px; */
+    vertical-align: center;
+    text-align: center;
+    line-height:80px;
+    text-align: center;
+    margin: 0px;
+}
+#image1
+{
+    border: 2px solid black;
+    display: inline-block;
+    width: 18%;
+}
+.com1
+{
+    vertical-align: center;
+    text-align: center;
+    line-height: 200px;
+    text-align: center;
+    margin-top: 1px;
+}
+input.in
+{
+    height: 12px;
+    width: 12px;
+}
+.com2
+{
+    vertical-align: center;
+    text-align: center;
+    line-height: 200px;
+    text-align: center;
+    margin-top: 1px;
+}
+.im
+{
+    display:block;
+    background: 100% 100%;
+}
+#quant
+{
+    width: 13%;
+    display: inline-block;
+    border: 2px solid black;
+}
+.bn
+{
+    height: 50px;
+    width: 126px;
+    border-radius: 40px;
+    font-size: 23px;
+    font-family: emoji;
+    background: aquamarine;
+}
